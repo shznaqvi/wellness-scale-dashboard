@@ -1,0 +1,20 @@
+{
+  "version": 3,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "edu.aku.hassannaqvi.wellnessscale",
+  "variantName": "release",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "attributes": [],
+      "versionCode": 1053,
+      "versionName": "2.62R",
+      "outputFile": "WellnessScale_2024_06_26_Rv1053.apk"
+    }
+  ],
+  "elementType": "File"
+}

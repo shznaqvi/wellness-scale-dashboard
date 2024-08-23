@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create New User</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container mt-5">
+    <h2>Create New User</h2>
+
+    <?php if (isset($insertSuccess) && $insertSuccess) : ?>
+        <div class="alert alert-success" role="alert">
+            User created successfully!
+        </div>
+    <?php endif; ?>
+
+    <?php if (isset($insertError)) : ?>
+        <div class="alert alert-danger" role="alert">
+            <?php echo $insertError; ?>
+        </div>
+    <?php endif; ?>
+
+    <form method="post">
+        <div class="form-group">
+            <label>Username:</label>
+            <input type="text" class="form-control" name="username" required>
+        </div>
+
+        <div class="form-group">
+            <label>Password:</label>
+            <input type="password" class="form-control" name="password" required>
+        </div>
+
+        <div class="form-group">
+            <label>Full Name:</label>
+            <input type="text" class="form-control" name="full_name">
+        </div>
+
+        <div class="form-group">
+            <label>Designation:</label>
+            <input type="text" class="form-control" name="designation">
+        </div>
+
+        <div class="form-group">
+            <label>Enabled:</label>
+            <select class="form-control" name="enabled">
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Is New User:</label>
+            <select class="form-control" name="isNewUser">
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Password Expiry:</label>
+            <input type="text" class="form-control" name="pwdExpiry">
+        </div>
+
+        <div class="form-group">
+            <label>Dist ID:</label>
+            <input type="text" class="form-control" name="dist_id">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Create User</button>
+    </form>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

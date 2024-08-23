@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create New User - Wellness Scale App</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+        <a class="navbar-brand" href="#">Wellness Scale App</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container mt-5">
+    <h2>Create New User</h2>
+    
+ <?php if (isset($insertSuccess) && $insertSuccess) : ?>
+        <div class="alert alert-success" role="alert">
+            User created successfully!
+        </div>
+    <?php endif; ?>
+
+    <?php if (isset($insertError)) : ?>
+        <div class="alert alert-danger" role="alert">
+            <?php echo $insertError; ?>
+        </div>
+    <?php endif; ?>
+
+    <form method="post">
+        <div class="form-group">
+            <label>Username:</label>
+            <input type="text" class="form-control" name="username" required>
+        </div>
+
+        <div class="form-group">
+            <label>Password:</label>
+            <input type="password" class="form-control" name="password" required>
+        </div>
+
+        <div class="form-group">
+            <label>Full Name:</label>
+            <input type="text" class="form-control" name="full_name">
+        </div>
+
+        <div class="form-group">
+            <label>Designation:</label>
+            <input type="text" class="form-control" name="designation">
+        </div>
+
+        <div class="form-group">
+            <label>Enabled:</label>
+            <select class="form-control" name="enabled">
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Is New User:</label>
+            <select class="form-control" name="isNewUser">
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Password Expiry:</label>
+            <input type="text" class="form-control" name="pwdExpiry">
+        </div>
+
+        <div class="form-group">
+            <label>Dist ID:</label>
+            <input type="text" class="form-control" name="dist_id">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Create User</button>
+    </form>    
+</div>
+
+<footer class="footer bg-primary text-white text-center py-3">
+    <div class="container">
+        <p>&copy; 2023 Wellness Scale App. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
