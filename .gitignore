@@ -1,0 +1,6 @@
+/app/previous_versions/
+/api/json/
+/api/photos/
+/api/uploads/
+/api/errors/
+*.apk
